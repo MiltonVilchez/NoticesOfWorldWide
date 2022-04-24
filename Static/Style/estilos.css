@@ -40,6 +40,13 @@ padding-right: 2rem;
 	padding: 8px;
 }
 
+.scrollVertical{
+    height: 500px;
+	width: 100%;
+	overflow: auto;
+	padding: 8px;
+}
+
 .bloqueHis{
     width: 190%;
 }
