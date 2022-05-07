@@ -1,3 +1,7 @@
+html, body{
+    min-height: 100%;
+}
+
 #navlayoutPadre{
 padding-left: 2rem;
 padding-right: 2rem;
@@ -68,10 +72,6 @@ padding-right: 2rem;
     height: 26rem;
 }
 
-#DivNoticiaGrande p{
-
-}
-
 #DivNoticiaPeq{
     display:inline-block;
     background:#666;
@@ -79,10 +79,6 @@ padding-right: 2rem;
     height: 12rem;
     margin: 8px;
     box-shadow: 2px 2px 10px;
-}
-
-#DivNoticiaPeq p{
-
 }
 
 #noticiaHor{
@@ -111,5 +107,40 @@ padding-right: 2rem;
     margin: 2rem;
 }
 
+.divOcultar{
+    display: none;
+    opacity: 0;
+}
 
+#DivRegister{
+    background: #000;
+    height: 100%;
+}
 
+#DivLogIn{
+    background: #F5F2F2;
+    height: 100%;
+}
+
+#columnaLogin{
+    height: 100vh;
+    padding:0;
+    display: table;
+}
+
+#columnaLogin div{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#botonSiFondo{
+    margin-top: 2rem;
+    background: none;
+    border-style: hidden;
+    border-radius: 180px;
+    height:3rem;
+}
+
+#inputLogin{
+    
+}
