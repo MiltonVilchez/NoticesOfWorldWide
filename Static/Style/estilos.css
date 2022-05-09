@@ -110,11 +110,13 @@ padding-right: 2rem;
 .divOcultar{
     display: none;
     opacity: 0;
+    overflow: hidden;
 }
 
 #DivRegister{
-    background: #000;
-    height: 100%;
+    background: #F5F2F2;
+    height:fit-content;
+    padding-top: 2rem;
 }
 
 #DivLogIn{
@@ -142,5 +144,9 @@ padding-right: 2rem;
 }
 
 #inputLogin{
-    
+    border: solid 1px #666;
+    width: 60%;
+    height: 45px;
+    border-radius: 180px;
+    margin-top: 2rem;
 }
