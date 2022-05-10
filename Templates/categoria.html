@@ -8,7 +8,10 @@
     <link rel="shortcut icon"
         href="https://res.cloudinary.com/drdadalne/image/upload/v1650255318/news-report_vamuss.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../Static/Style/estilos.css">
     <title>NOWW</title>
 </head>
@@ -24,7 +27,7 @@
                             alt="iconoNOWW.png" width="32" height="32" class="d-inline-block align-text-top">
                         Regresar
                     </a>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="home.html">
                         <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650255318/newspaper_vlgyka.png"
                             alt="iconoNOWW.png" width="40" height="32" class="d-inline-block align-text-top">
                         NOWW
@@ -37,11 +40,10 @@
                                 alt="live.png" class="d-inline-block align-text-top">
                         </a>
                     </div>
-                    <div>
-                        <a>
-                            <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/search_p7ad6y.png"
-                                alt="search.png" class="d-inline-block align-text-top">
-                        </a>
+                    <div class="search-box">
+                        <input type="text" placeholder="Búsqueda" class="search-input" />
+                        <a href="#" class="search-btn"><span style="color: black; font-size:large"
+                                class="fas fa-search"></span></a>
                     </div>
                     <div>
                         <a href="cuenta.html">
@@ -79,27 +81,27 @@
     <main style="margin: 2rem;">
         <h3>Categoria</h3>
         <div>
-            <img src="" alt="" style="background: #d3d3d3;" width="800" height="400">
+            <a href="noticia.html"><img src="https://res.cloudinary.com/drdadalne/image/upload/v1652119970/_124629569_ukr.jpg_bcgpi4.webp" alt="" style="background: #d3d3d3;" width="800" height="400"></a>
             <div style="background: red; width: fit-content;">
                 <p>Hace 10 horas</p>
             </div>
-            <h4>Title</h4>
+            <h4>Por qué Ucrania no reconoce ni niega su responsabilidad en los aparentes ataques</h4>
         </div>
         <hr>
         <div class="row" style="display: inline-flexbox;">
             <div class="col-4">
-                <img src="" alt="" style="background: #d3d3d3;" width="400" height="300">
+                <a href="noticia.html"><img src="https://res.cloudinary.com/drdadalne/image/upload/v1652117444/_124646654_red3.jpg_h6jr6r.webp" alt="" style="background: #d3d3d3;" width="400" height="300"></a>
                 <div style="background: red; width: fit-content;">
                     <p>Hace 10 horas</p>
                 </div>
-                <h4>Title</h4>
+                <h4>RUSIA LLEVA FUERZAS A MARIUPOL ANTES DEL DESFILE DEL 'DÍA DE LA VICTORIA', LOS FUNCIONARIOS TRABAJAN PARA RESCATE A LAS TROPAS ATRAPADAS</h4>
             </div>
-            <div class="col">
-                <img src="" alt="" style="background: #d3d3d3;" width="400" height="300">
+            <div class="col-4">
+                <a href="noticia.html"><img src="https://res.cloudinary.com/drdadalne/image/upload/v1652117149/_124622711_putin_getty976.jpg_kcgcdv.webp" alt="" style="background: #d3d3d3;" width="400" height="300"></a>
                 <div style="background: red; width: fit-content;">
                     <p>Hace 10 horas</p>
                 </div>
-                <h4>Title</h4>
+                <h4>El destino de las tropas ucranianas atrincheradas en los túneles de la planta sigue sin estar claro</h4>
             </div>
         </div>
         <hr>
@@ -107,26 +109,32 @@
             <h5>Más Artículos</h5>
             <div style="margin-top:1rem;" class="row">
                 <div class="col-4">
-                    <img style="background: #d3d3d3;" width="400" height="300" src="" alt="">
+                    <a href="noticia.html"><img style="background: #d3d3d3;" width="400" height="300" src="https://res.cloudinary.com/drdadalne/image/upload/v1652160562/Mariupol_ypeeqd.webp" alt=""></a>
                 </div>
                 <div class="col">
-                    <h4>title</h4>
-                    <p style="margin-top: 2rem;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ea autem commodi voluptatem, exercitationem, dicta asperiores iusto non est odio ullam saepe vel nisi rem et accusantium recusandae libero dolorem.</p>
-                    <center><p>Hace 10 horas</p></center>
+                    <h4>Las mujeres pasan frente a un edificio de apartamentos destruido en Mariupol</h4>
+                    <p style="margin-top: 2rem;">Ucrania y funcionarios internacionales instaron durante semanas a Rusia a detener su constante campaña de bombardeos sobre la ya pulverizada planta para permitir que se lleven a cabo las evacuaciones humanitarias.</p>
+                    <center>
+                        <p>Hace 10 horas</p>
+                    </center>
                 </div>
             </div>
             <hr>
             <div style="margin-top:1rem;" class="row">
                 <div class="col-4">
-                    <img style="background: #d3d3d3;" width="400" height="300" src="" alt="">
+                    <a href="noticia.html"><img style="background: #d3d3d3;" width="400" height="300" src="https://res.cloudinary.com/drdadalne/image/upload/v1652160817/AP22125560305992_epqhlj.webp" alt=""></a>
                 </div>
                 <div class="col">
-                    <h4>title</h4>
-                    <p style="margin-top: 2rem;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ea autem commodi voluptatem, exercitationem, dicta asperiores iusto non est odio ullam saepe vel nisi rem et accusantium recusandae libero dolorem.</p>
-                    <center><p>Hace 10 horas</p></center>
+                    <h4>Servicio de prensa del Ministerio del Interior de la República, el humo se eleva desde el combinado metalúrgico Azovstal en Mariupol.</h4>
+                    <p style="margin-top: 2rem;">A los funcionarios les preocupa que las fuerzas rusas puedan eliminar el último reducto ucraniano en Mariupol mientras buscan poner fin a la resistencia en la ciudad portuaria a tiempo para el desfile del "Día de la Victoria" del presidente ruso Vladimir Putin el 9 de mayo.</p>
+                    <center>
+                        <p>Hace 10 horas</p>
+                    </center>
                 </div>
             </div>
-            <center style="margin-top: 2rem;"><img src="https://res.cloudinary.com/drdadalne/image/upload/v1650650409/loading_qpngrd.png" alt=""></center>
+            <center style="margin-top: 2rem;">
+                <div id="spinner"></div>
+            </center>
         </div>
     </main>
     <footer>

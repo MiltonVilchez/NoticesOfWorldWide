@@ -240,3 +240,16 @@ padding-right: 2rem;
     background: #cecaca;
     color: #000;
 }
+
+#spinner{
+    width: 70px;
+    height: 70px;
+    border: 10px solid #CCCC;
+    border-top: 10px solid red;
+    border-radius: 100px;
+    animation: rotate 2s linear infinite;
+}
+@keyframes rotate{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
