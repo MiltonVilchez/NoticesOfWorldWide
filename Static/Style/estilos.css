@@ -41,6 +41,7 @@ padding-right: 2rem;
 .scrollHorizontal{
     width: auto;
 	overflow:auto;
+    overflow-y:hidden;
 	padding: 8px;
 }
 
@@ -111,6 +112,16 @@ padding-right: 2rem;
     padding: 0;
 }
 
+#imagenes{
+    width: 800px;
+    height: 400px;
+}
+
+#imagenPequeña{
+    width: 400px;
+    height: 300px;
+}
+
 #description{
     border-radius: 0px 50px 50px 0px;
     background: #A3A3A3;
@@ -130,8 +141,22 @@ padding-right: 2rem;
     text-align: center;
 }
 
+#topNoticia{
+    position: absolute;
+    z-index: 1;
+    padding-top: 8rem;
+    padding-left: 1rem; 
+    padding-right: 1rem; 
+}
+
 .VideoLive{
     margin: 2rem;
+    width: 800px;
+    height: 530px;
+}
+
+#sectionLive{
+    border-right: 2px solid #000;
 }
 
 .divOcultar{
@@ -178,7 +203,19 @@ padding-right: 2rem;
     margin-top: 2rem;
 }
 
+.btnIngresaLogin{
+    background: #DDB2B2; 
+    color: black; 
+    margin-top: 5rem;
+}
+
 #imagenesNoticias{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#imagenesHistoria{
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -254,39 +291,101 @@ padding-right: 2rem;
     100% {transform: rotate(360deg);}
 }
 
-/*Responsive media screen*/
 @media only screen and (max-width: 768px) {
-    [class*="col-"] {
+    [class*="col-sm"] {
       width: 100%;
+    }
+    #divhistorias{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    #titulos{
+        font-size: medium;
+    }
+    #descripcion{
+        font-size: medium;
+    }
+    #numeroPost{
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .scrollVertical{
+        margin-left: 0.5rem;
+    }
+    #topNoticia{
+        padding-top: 5rem;
+    }
+    #imagenes{
+        width: 350px;
+        height: 300px;
+    }
+    #imagenPequeña{
+        width: 350px;
+        height: 300px;
+    }
+    .VideoLive{
+        width: 350px;
+        height: 200px;
+        margin-left: -1rem;
+        padding: 0;
+    }
+    #sectionLive{
+        border-right: transparent;
+        width: 350px;
+        height: auto;
+    }
+    #columnaLogin{
+        padding-top: 1rem;
+        height: auto;
+    }
+    #inputLogin{
+        margin-top: 1rem;
+    }
+    .btnIngresaLogin{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    #OtrasimagenesNoticias{
+        border-radius: 10px 10px 0px 0px;
+    }
+    .scrollHorizontal{
+        height: 348px;
+    }
+    .bloqueHis{
+        width: 190%;
+        display: inline-flex;
+    }
+    #imagenesHistoria{
+        width: 248px;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+    .col-sm-1 {width: 8.33%;}
+    .col-sm-2 {width: 16.66%;}
+    .col-sm-3 {width: 25%;}
+    .col-sm-4 {width: 33.33%;}
+    .col-sm-5 {width: 41.66%;}
+    .col-sm-6 {width: 50%;}
+    .col-sm-7 {width: 58.33%;}
+    .col-sm-8 {width: 66.66%;}
+    .col-sm-9 {width: 75%;}
+    .col-sm-10 {width: 83.33%;}
+    .col-sm-11 {width: 91.66%;}
+    .col-sm-12 {width: 100%;}
   }
 
   @media only screen and (min-width: 600px) {
-    .col-s-1 {width: 8.33%;}
-    .col-s-2 {width: 16.66%;}
-    .col-s-3 {width: 25%;}
-    .col-s-4 {width: 33.33%;}
-    .col-s-5 {width: 41.66%;}
-    .col-s-6 {width: 50%;}
-    .col-s-7 {width: 58.33%;}
-    .col-s-8 {width: 66.66%;}
-    .col-s-9 {width: 75%;}
-    .col-s-10 {width: 83.33%;}
-    .col-s-11 {width: 91.66%;}
-    .col-s-12 {width: 100%;}
+    .col-sm-1 {width: 8.33%;}
+    .col-sm-2 {width: 16.66%;}
+    .col-sm-3 {width: 25%;}
+    .col-sm-4 {width: 33.33%;}
+    .col-sm-5 {width: 41.66%;}
+    .col-sm-6 {width: 50%;}
+    .col-sm-7 {width: 58.33%;}
+    .col-sm-8 {width: 66.66%;}
+    .col-sm-9 {width: 75%;}
+    .col-sm-10 {width: 83.33%;}
+    .col-sm-11 {width: 91.66%;}
+    .col-sm-12 {width: 100%;}
   }

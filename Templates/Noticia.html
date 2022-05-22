@@ -19,47 +19,58 @@
 <body>
     <header>
         <!--Navbar de titulo, search, cuenta y configuracion-->
-        <nav class="navbar navbar-light bg-light">
-            <div id="navlayoutPadre" class="container-fluid">
-                <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-flex justify-content-evenly">
                     <a class="navbar-brand" href="home.html">
                         <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650650639/left_eln8c6.png"
                             alt="iconoNOWW.png" width="32" height="32" class="d-inline-block align-text-top">
                         Regresar
                     </a>
-                    <a class="navbar-brand" href="home.html">
+                    <a class="navbar-brand" href="#">
                         <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650255318/newspaper_vlgyka.png"
                             alt="iconoNOWW.png" width="40" height="32" class="d-inline-block align-text-top">
                         NOWW
                     </a>
                 </div>
-                <div id="navlayout">
-                    <div>
-                        <a href="live.html" class="navbar-brand">
-                            <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/live_jazncv.png"
-                                alt="live.png" class="d-inline-block align-text-top">
-                        </a>
-                    </div>
-                    <div class="search-box">
-                        <input type="text" placeholder="Búsqueda" class="search-input" />
-                        <a href="#" class="search-btn"><span style="color: black; font-size:large"
-                                class="fas fa-search"></span></a>
-                    </div>
-                    <div>
-                        <a href="cuenta.html">
-                            <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/account_ken7li.png"
-                                alt="Usuario.png" class="d-inline-block align-text-top">
-                        </a>
-                    </div>
-                    <div>
-                        <button style="background: transparent; border-style:none" data-bs-toggle="dropdown">
-                            <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/settings_yvgceh.png"
-                                alt="Settings.png" class="d-inline-block align-text-top">
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li style="cursor: pointer;"><h6 class="dropdown-header"><i class="fa-solid fa-language"></i>Idioma</h6></li>
-                            <li style="cursor: pointer;"><h6 class="dropdown-header"><i class="fa-solid fa-moon-over-sun"></i>Modo: Claro</h6></li>                            
-                        </ul>
+                <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
+                    <div class="navbar-nav" id="navlayout">
+                        <div class="nav-item">
+                            <a href="live.html" class="navbar-brand">
+                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/live_jazncv.png"
+                                    alt="live.png" class="d-inline-block align-text-top">
+                            </a>
+                        </div>
+                        <div class="search-box nav-item">
+                            <input type="text" placeholder="Búsqueda" class="search-input" />
+                            <a href="#" class="search-btn"><span style="color: black; font-size:large"
+                                    class="fas fa-search"></span></a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="cuenta.html">
+                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/account_ken7li.png"
+                                    alt="Usuario.png" class="d-inline-block align-text-top">
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <button style="background: transparent; border-style:none" data-bs-toggle="dropdown">
+                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/settings_yvgceh.png"
+                                    alt="Settings.png" class="d-inline-block align-text-top">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li style="cursor: pointer;">
+                                    <h6 class="dropdown-header"><i class="fa-solid fa-language"></i>Idioma</h6>
+                                </li>
+                                <li style="cursor: pointer;">
+                                    <h6 class="dropdown-header"><i class="fa-solid fa-moon-over-sun"></i>Modo: Claro
+                                    </h6>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,7 +96,7 @@
     <main>
         <!--Foto de Portada-->
         <div>
-            <div style="position: absolute;z-index: 1; padding-top: 8rem;padding-left: 1rem; padding-right: 1rem;">
+            <div id="topNoticia">
                 <center>
                     <h3 id="titulos">RUSIA LLEVA FUERZAS A MARIUPOL ANTES DEL DESFILE DEL 'DÍA DE LA VICTORIA', LOS
                         FUNCIONARIOS TRABAJAN PARA RESCATE A LAS TROPAS ATRAPADAS</h3>
@@ -95,7 +106,7 @@
                         para el desfile del "Día de la Victoria" del presidente ruso Vladimir Putin el 9 de mayo.
                         Evacuaciones civiles negociadas por las Naciones Unidas y el Comité Internacional de la Cruz
                         Roja comenzó la semana pasada a sacar a unas 200 personas escondidas en los túneles.</i>
-                    <p style="padding-top: 3rem;">Ultima fecha de actualizacion</p>
+                    <p >Ultima fecha de actualizacion</p>
                 </center>
             </div>
             <div>
@@ -107,7 +118,7 @@
         <hr>
         <div>
             <div class="row" style="width: 100%;">
-                <div class="col-6">
+                <div class="col-sm-6">
                     <div style="border:1px solid #000; margin: 1rem;">
                         <h3>Acontecimientos:</h3>
                         <ol>
@@ -126,10 +137,10 @@
                         </ol>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div style="display: inline-flex; width: 100%;">
+                <div class="col-sm">
+                    <div id="numeroPost" class="d-flex justify-content-between">
                         <h6>4 post</h6>
-                        <div style="display: inline-flex; margin-left: 50%;">
+                        <div style="display: inline-flex;">
                             <p>ordenar por</p>
                             <select style="margin-bottom: 16px;" name="" id="">
                                 <option value="">Mas reciente</option>
