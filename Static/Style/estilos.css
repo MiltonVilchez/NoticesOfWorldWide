@@ -291,7 +291,8 @@ padding-right: 2rem;
     100% {transform: rotate(360deg);}
 }
 
-@media only screen and (max-width: 768px) {
+/*Telefonos*/
+@media only screen and (max-width: 600px) {
     [class*="col-sm"] {
       width: 100%;
     }
@@ -360,6 +361,7 @@ padding-right: 2rem;
     }
 }
 
+/*Tablets*/
 @media only screen and (min-width: 768px) {
     .col-sm-1 {width: 8.33%;}
     .col-sm-2 {width: 16.66%;}
@@ -375,6 +377,7 @@ padding-right: 2rem;
     .col-sm-12 {width: 100%;}
   }
 
+  /*Tablet*/
   @media only screen and (min-width: 600px) {
     .col-sm-1 {width: 8.33%;}
     .col-sm-2 {width: 16.66%;}
