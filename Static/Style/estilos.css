@@ -67,6 +67,12 @@ padding-right: 2rem;
     border-radius: 10px;
 }
 
+.btnimagen{
+    background: transparent;
+    border-style: none;
+    padding: 0;
+}
+
 #DivNoticiaGrande{
     width: 100%;
     box-shadow: 2px 2px 10px;
