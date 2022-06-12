@@ -242,6 +242,11 @@ padding-right: 2rem;
     margin-right: 1rem;
 }
 
+#haceHora{
+    color:white;
+    padding: 3px;
+}
+
 .search-box{
     position: absolute;
     top: 50%;
