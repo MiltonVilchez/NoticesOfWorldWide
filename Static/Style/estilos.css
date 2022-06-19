@@ -56,6 +56,11 @@ padding-right: 2rem;
     width: 190%;
 }
 
+#haceHora{
+    color:white;
+    padding: 3px;
+}
+
 .Historia{
     display:inline-flex;
     box-shadow: 5px 5px 10px;   

@@ -52,11 +52,11 @@
                             </a>
                         </div>
                         <div class="nav-item">
-                            <button style="background: transparent; border-style:none" data-bs-toggle="dropdown">
+                            <button style="background: transparent; border-style:none" class="dropdown-toogle" aria-expanded="false" data-bs-toggle="dropdown">
                                 <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/settings_yvgceh.png"
                                     alt="Settings.png" class="d-inline-block align-text-top">
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
+                            <ul style="position: absolute; transform: translate(0px, 50px);" class="dropdown-menu-end dropdown-menu">
                                 <li style="cursor: pointer;">
                                     <h6 class="dropdown-header"><i class="fa-solid fa-language"></i>Idioma</h6>
                                 </li>
@@ -72,8 +72,7 @@
         </nav>
         <!--Menu de categorias-->
         <nav id="subnav" class="navbar navbar-expand-lg sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Categorías</a>
+            <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavb" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i style="color: white;" class="fa-solid fa-bars"></i>
                 </button>                
@@ -102,7 +101,7 @@
                 <h4>Bienvenido a NoticiasMundiales.com</h4>
             </div>
             <div class="col-sm" style="text-align: right;">
-                <h5>Martes 22 de marzo, 2022</h5>
+                <h5 id="FullDay"></h5>
             </div>
         </div>
         <!--Bloque de las historias destacadas-->
@@ -203,7 +202,7 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <a style="position: absolute; font-size:xx-large; color:red; font-weight:700;bottom:10%;"
-                                href="Noticia.html" data-bs-dismiss="modal"><i class="fa-solid fa-angle-up"></i></a>
+                                href="noticia.html" data-bs-dismiss="modal"><i class="fa-solid fa-angle-up"></i></a>
                         </div>
                     </div>
                 </div>
@@ -227,7 +226,7 @@
                                     covid notificados oficialmente a la OMS</p>
                             </i>
                         </div>
-                        <a href="Noticia.html"><img
+                        <a href="noticia.html"><img
                                 src="https://res.cloudinary.com/drdadalne/image/upload/v1652116093/_124430550_554e8d40-a7f9-4752-8452-6ddbc19ce212_g9k1v2.jpg"
                                 id="imagenesNoticias" alt="FotoNoticia.png"></a>
                     </div>
@@ -236,7 +235,7 @@
                     <div class="row">
                         <div class="col-sm">
                             <div class="position-relative" id="DivNoticiaPeq">
-                                <a href="Noticia.html"><img id="imagenesNoticias"
+                                <a href="noticia.html"><img id="imagenesNoticias"
                                         src="https://res.cloudinary.com/drdadalne/image/upload/v1652119837/_124311631_abinader2.jpg_itlavg.webp"
                                         alt=""></a>
                                 <div class="position-absolute bottom-0 start-0">
@@ -248,7 +247,7 @@
                                 </div>
                             </div>
                             <div class="position-relative" id="DivNoticiaPeq">
-                                <a href="Noticia.html"><img id="imagenesNoticias"
+                                <a href="noticia.html"><img id="imagenesNoticias"
                                         src="https://res.cloudinary.com/drdadalne/image/upload/v1652119970/_124629569_ukr.jpg_bcgpi4.webp"
                                         alt=""></a>
                                 <div class="position-absolute bottom-0 start-0">
@@ -261,7 +260,7 @@
                         </div>
                         <div class="col-sm">
                             <div class="position-relative" id="DivNoticiaPeq">
-                                <a href="Noticia.html"><img id="imagenesNoticias"
+                                <a href="noticia.html"><img id="imagenesNoticias"
                                         src="https://res.cloudinary.com/drdadalne/image/upload/v1652120034/_124601186_hotel.jpg_dg1ju5.webp"
                                         alt=""></a>
                                 <div class="position-absolute bottom-0 start-0">
@@ -272,7 +271,7 @@
                                 </div>
                             </div>
                             <div class="position-relative" id="DivNoticiaPeq">
-                                <a href="Noticia.html"><img id="imagenesNoticias"
+                                <a href="noticia.html"><img id="imagenesNoticias"
                                         src="https://res.cloudinary.com/drdadalne/image/upload/v1652120089/_124604531_gettyimages-1240467958.jpg_srumsa.webp"
                                         alt=""></a>
                                 <div class="position-absolute bottom-0 start-0">
@@ -293,7 +292,7 @@
             <div class="row">
                 <div class="col-sm-6" style="padding: 0;">
                     <div class="position-relative" id="OtrasNoticiaGrande">
-                        <a href="Noticia.html"><img id="OtrasimagenesNoticias"
+                        <a href="noticia.html"><img id="OtrasimagenesNoticias"
                                 src="https://res.cloudinary.com/drdadalne/image/upload/v1652122125/_124277626_gettyimages-1240218851.jpg_imtkjg.webp"
                                 alt=""></a>
                         <div class="position-absolute top-0 start-0">
@@ -313,7 +312,7 @@
                     <div class="row">
                         <div class="col-sm">
                             <div id="noticiaHor" class="position-relative">
-                                <a style="text-decoration: none;" href="Noticia.html"><strong>
+                                <a style="text-decoration: none;" href="noticia.html"><strong>
                                         <p id="Otrostitulos">Casi 1.000 civiles muertos en la guerra de Ucrania hasta
                                             ahora</p>
                                     </strong></a>
@@ -365,7 +364,7 @@
             <div class="row">
                 <div class="col-sm-6" style="padding: 0;">
                     <div class="position-relative" id="OtrasNoticiaGrande">
-                        <a href="Noticia.html"><img id="OtrasimagenesNoticias"
+                        <a href="noticia.html"><img id="OtrasimagenesNoticias"
                                 src="https://res.cloudinary.com/drdadalne/image/upload/v1652156193/p03n66tl_px0tiu.jpg"
                                 alt=""></a>
                         <div class="position-absolute top-0 start-0">
@@ -385,7 +384,7 @@
                     <div class="row">
                         <div class="col-sm">
                             <div id="noticiaHor" class="position-relative">
-                                <a style="text-decoration: none;" href="Noticia.html"><strong>
+                                <a style="text-decoration: none;" href="noticia.html"><strong>
                                         <p id="Otrostitulos">¿La comida india más auténtica de Londres?</p>
                                     </strong></a>
                                 <div class="position-absolute bottom-0">
@@ -400,7 +399,7 @@
                     <div class="row">
                         <div class="col-sm">
                             <div id="noticiaHor" class="position-relative">
-                                <a href="Noticia.html" style="text-decoration:none"><strong>
+                                <a href="noticia.html" style="text-decoration:none"><strong>
                                         <p id="Otrostitulos">La rara nueva aventura de esquí de Canadá</p>
                                     </strong></a>
                                 <div class="position-absolute bottom-0">
@@ -415,7 +414,7 @@
                     <div class="row">
                         <div class="col-sm">
                             <div id="noticiaHor" class="position-relative">
-                                <a href="Noticia.html" style="text-decoration: none;"><strong>
+                                <a href="noticia.html" style="text-decoration: none;"><strong>
                                         <p id="Otrostitulos">¿Cómo siguen en pie los monumentos de Roma?</p>
                                     </strong></a>
                                 <div class="position-absolute bottom-0">
@@ -434,7 +433,7 @@
             <div class="row">
                 <div class="col-sm-6" style="padding: 0;">
                     <div class="position-relative" id="OtrasNoticiaGrande">
-                        <a href="Noticia.html"><img id="OtrasimagenesNoticias"
+                        <a href="noticia.html"><img id="OtrasimagenesNoticias"
                                 src="https://res.cloudinary.com/drdadalne/image/upload/v1652156610/AP19113591278633_rv3wqh.webp"
                                 alt=""></a>
                         <div class="position-absolute top-0 start-0">
@@ -454,7 +453,7 @@
                     <div class="row">
                         <div class="col-sm">
                             <div id="noticiaHor" class="position-relative">
-                                <a href="Noticia.html" style="text-decoration: none;"><strong>
+                                <a href="noticia.html" style="text-decoration: none;"><strong>
                                         <p id="Otrostitulos">Shell reconsidera su salida del campo petrolero frente a
                                             las Shetland</p>
                                     </strong></a>
@@ -470,7 +469,7 @@
                     <div class="row">
                         <div class="col-sm">
                             <div id="noticiaHor" class="position-relative">
-                                <a href="Noticia.html" style="text-decoration: none;"><strong>
+                                <a href="noticia.html" style="text-decoration: none;"><strong>
                                         <p id="Otrostitulos">El sudeste asiático siente un pellizco económico por la
                                             guerra de Ucrania</p>
                                     </strong></a>
@@ -486,7 +485,7 @@
                     <div class="row">
                         <div class="col-sm">
                             <div id="noticiaHor" class="position-relative">
-                                <a href="Noticia.html" style="text-decoration:none;"><strong>
+                                <a href="noticia.html" style="text-decoration:none;"><strong>
                                         <p id="Otrostitulos">Saudi Aramco aumenta la inversión para impulsar la
                                             producción</p>
                                     </strong></a>
