@@ -12,22 +12,19 @@ exampleModal.addEventListener("show.bs.modal", (event) => {
   const modalTitle = exampleModal.querySelector(".modal-title");
 
   modalTitle.textContent = recipient;
-  document.getElementById("rutaImagen").src = recipientPhoto;
+  document.getElementById("rutaImagen").src=recipientPhoto;
 });
 
-function registrar(){
-  document.getElementById("DivRegister").classList.remove("divOcultar");
-  document.getElementById("DivLogIn").classList.add("divOcultar");
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  let date = new Date();
-  const DiasSemana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
-  const monthName = date.toLocaleString('us-US', {month: 'long'});
-  const dayNumber = date.toLocaleString('us-US', {day: 'numeric'});
-  const yearNumber = date.toLocaleString('us-US', {year: 'numeric'});
-  const dayName = DiasSemana[date.getDay()];
-  let FullDate = dayName + " " + dayNumber + " de " + monthName + ", " + yearNumber;
-  document.getElementById("FullDay").innerHTML = FullDate;
-
+  if (localStorage.username == undefined) {
+    document.getElementById("DivLogIn").classList.remove("divOcultar");
+  } else {
+    document.getElementById("DivRegister").classList.add("divOcultar");
+    document.getElementById("DivLogIn").classList.add("divOcultar");
+    document.getElementById("cuenta").classList.remove("divOcultar");
+  }
+  registrar = () => {
+    document.getElementById("DivRegister").classList.remove("divOcultar");
+    document.getElementById("DivLogIn").classList.add("divOcultar");
+  };
 });
