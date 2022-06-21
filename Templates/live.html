@@ -21,36 +21,37 @@
         <!--Navbar de titulo, search, cuenta y configuracion-->
         <nav class="navbar navbar-light bg-light">
             <div id="navlayoutPadre" class="container-fluid">
-                <div>
+                <div class="nav-item">
                     <a class="navbar-brand" href="#">
                         <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650255318/newspaper_vlgyka.png"
                             alt="iconoNOWW.png" width="30" height="24" class="d-inline-block align-text-top">
                         NOWW
                     </a>
                 </div>
-                <div id="navlayout">
+                <div class="nav-item" id="navlayout">
                     <div class="search-box">
                         <input type="text" placeholder="Búsqueda" class="search-input" />
                         <a href="#" class="search-btn"><span style="color: black; font-size:large"
                                 class="fas fa-search"></span></a>
                     </div>
-                    <div>
+                    <div class="nav-item">
                         <a href="cuenta.html">
                             <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/account_ken7li.png"
                                 alt="Usuario.png" class="d-inline-block align-text-top">
                         </a>
                     </div>
-                    <div>
-                        <button style="background: transparent; border-style:none" data-bs-toggle="dropdown">
+                    <div class="nav-item">
+                        <button style="background: transparent; border-style:none" class="dropdown-toogle" aria-expanded="false" data-bs-toggle="dropdown">
                             <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/settings_yvgceh.png"
                                 alt="Settings.png" class="d-inline-block align-text-top">
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
+                        <ul style="position: absolute; transform: translate(0px, 50px);" class="dropdown-menu-end dropdown-menu">
                             <li style="cursor: pointer;">
                                 <h6 class="dropdown-header"><i class="fa-solid fa-language"></i>Idioma</h6>
                             </li>
                             <li style="cursor: pointer;">
-                                <h6 class="dropdown-header"><i class="fa-solid fa-moon-over-sun"></i>Modo: Claro</h6>
+                                <h6 class="dropdown-header"><i class="fa-solid fa-moon-over-sun"></i>Modo: Claro
+                                </h6>
                             </li>
                         </ul>
                     </div>
