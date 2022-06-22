@@ -57,11 +57,13 @@
                             </a>
                         </div>
                         <div class="nav-item">
-                            <button style="background: transparent; border-style:none" class="dropdown-toogle" aria-expanded="false" data-bs-toggle="dropdown">
+                            <button style="background: transparent; border-style:none" class="dropdown-toogle"
+                                aria-expanded="false" data-bs-toggle="dropdown">
                                 <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/settings_yvgceh.png"
                                     alt="Settings.png" class="d-inline-block align-text-top">
                             </button>
-                            <ul style="position: absolute; transform: translate(0px, 50px);" class="dropdown-menu-end dropdown-menu">
+                            <ul style="position: absolute; transform: translate(0px, 50px);"
+                                class="dropdown-menu-end dropdown-menu">
                                 <li style="cursor: pointer;">
                                     <h6 class="dropdown-header"><i class="fa-solid fa-language"></i>Idioma</h6>
                                 </li>
@@ -78,7 +80,8 @@
         <!--Menu de categorias-->
         <nav id="subnav" class="navbar navbar-expand-lg sticky-top">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavb" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavb"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i style="color: white;" class="fa-solid fa-bars"></i>
                 </button>
                 <div style="position:static;" class="collapse navbar-collapse" id="navbarNavb">
@@ -86,7 +89,8 @@
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Cultura</a></li>
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Clima</a></li>
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Deporte</a></li>
-                        <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Entretenimiento</a></li>
+                        <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Entretenimiento</a>
+                        </li>
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Moda</a></li>
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Mundo</a></li>
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Música</a></li>
@@ -101,6 +105,9 @@
         </nav>
     </header>
     <main>
+        <!-- No se porque me se me quiebra el codigo -->
+        <h6 id="FullDay" style="display: none;"></h6>
+        <div id="publicarNoticia" style="display: none" ></div>
         <!--Foto de Portada-->
         <div>
             <div id="topNoticia">
@@ -113,7 +120,7 @@
                         para el desfile del "Día de la Victoria" del presidente ruso Vladimir Putin el 9 de mayo.
                         Evacuaciones civiles negociadas por las Naciones Unidas y el Comité Internacional de la Cruz
                         Roja comenzó la semana pasada a sacar a unas 200 personas escondidas en los túneles.</i>
-                    <p >Ultima fecha de actualizacion</p>
+                    <p>Ultima fecha de actualizacion</p>
                 </center>
             </div>
             <div>
@@ -145,22 +152,83 @@
                     </div>
                 </div>
                 <div class="col-sm">
-                    <div id="numeroPost" class="d-flex justify-content-between">
-                        <h6>4 post</h6>
-                        <div style="display: inline-flex;">
-                            <p>ordenar por</p>
-                            <select style="margin-bottom: 16px;" name="" id="">
-                                <option value="">Mas reciente</option>
-                                <option value="">Mas antiguo</option>
-                            </select>
+                    <div id="numeroPost" class="d-flex justify-content-between row">
+                        <div class="col-sm-2">
+                            <h6>4 post</h6>
+                        </div>
+                        <div id="seeBtnPost" class="col-sm-5 divOcultar">
+                            <div style="display: inline-flex;">
+                                <button class="btn btn-secondary" type="button" id="btnAddPost" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal"><i class="fa-solid fa-plus"></i>
+                                    Agrega una publicación</button>
+                            </div>
+                        </div>
+                        <div class="col-sm d-flex justify-content-end">
+                            <div style="display: inline-flex;">
+                                <p>ordenar por</p>
+                                <select style="margin-bottom: 16px;" name="" id="">
+                                    <option value="">Mas reciente</option>
+                                    <option value="">Mas antiguo</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div class="scrollVertical">
+
+                    <!-- Modal de los post -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 id="exampleModalLabel">Añade una publicación</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-sm">
+                                            <form>
+                                                <div style="padding: 1rem;" class="mb-3 row">
+                                                    <label for="inputPassword"
+                                                        class="col-sm-2 col-form-label">Título:</label>
+                                                    <div class="col-sm">
+                                                        <input type="text" class="form-control" id="inputPassword"
+                                                            required autocomplete="off">
+                                                    </div>
+                                                </div>
+                                                <div style="padding: 1rem;" class="mb-3 row">
+                                                    <label for="inputPassword"
+                                                        class="col-sm-2 col-form-label">Descripción:</label>
+                                                    <div class="col-sm">
+                                                        <textarea style="resize:both;width: 100%;" autocomplete="off" required></textarea>
+                                                    </div>
+                                                </div>
+                                                <div style="padding: 1rem;" class="mb-3 row">
+                                                    <label for="inputPassword"
+                                                        class="col-sm-2 col-form-label">Foto:</label>
+                                                    <div class="col-sm">
+                                                        <input type="file" class="form-control" id="inputPassword"
+                                                            required>
+                                                    </div>
+                                                </div>
+                                                <div style="padding-bottom: 1rem;" class="text-center">
+                                                    <button class="btn btn-warning" type="button">Agregar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1rem;" class="scrollVertical">
                         <div style="margin-top: 1rem;">
                             <p>Hace 1 minuto</p>
                             <center>
                                 tittle
-                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1652117444/_124646654_red3.jpg_h6jr6r.webp" style="background: #d3d3d3;" width="100%" height="250" alt="">
+                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1652117444/_124646654_red3.jpg_h6jr6r.webp"
+                                    style="background: #d3d3d3;" width="100%" height="250" alt="">
                             </center>
                             <div style="border-bottom: 4px solid red;">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quaerat consequuntur
@@ -182,7 +250,8 @@
                             <p>Hace 1 minuto</p>
                             <center>
                                 tittle
-                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1652119970/_124629569_ukr.jpg_bcgpi4.webp" width="100%" height="250" alt="">
+                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1652119970/_124629569_ukr.jpg_bcgpi4.webp"
+                                    width="100%" height="250" alt="">
                             </center>
                             <div style="border-bottom: 4px solid red;">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quaerat consequuntur
@@ -204,7 +273,8 @@
                             <p>Hace 1 minuto</p>
                             <center>
                                 tittle
-                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1652120034/_124601186_hotel.jpg_dg1ju5.webp" style="background: #d3d3d3;" width="100%" height="250" alt="">
+                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1652120034/_124601186_hotel.jpg_dg1ju5.webp"
+                                    style="background: #d3d3d3;" width="100%" height="250" alt="">
                             </center>
                             <div style="border-bottom: 4px solid red;">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quaerat consequuntur
@@ -226,7 +296,8 @@
                             <p>Hace 1 minuto</p>
                             <center>
                                 tittle
-                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1652160562/Mariupol_ypeeqd.webp" style="background: #d3d3d3;" width="100%" height="250" alt="">
+                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1652160562/Mariupol_ypeeqd.webp"
+                                    style="background: #d3d3d3;" width="100%" height="250" alt="">
                             </center>
                             <div style="border-bottom: 4px solid red;">
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo quaerat consequuntur
@@ -249,12 +320,11 @@
             </div>
         </div>
     </main>
-    <footer>
 
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="../Static/js/code.js"></script>
 </body>
 
 </html>
