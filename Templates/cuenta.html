@@ -16,7 +16,7 @@
     <title>NOWW</title>
 </head>
 
-<body style="height: 100vh;">
+<body>
     <header>
         <!--Navbar de titulo, search, cuenta y configuracion-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -95,7 +95,7 @@
             </div>
         </nav>
     </header>
-    <main style="height: 100%;">
+    <main>
         <div id="DivLogIn">
             <div style="margin: 0;" class="row">
                 <div id="columnaLogin" class="col-sm-3">
@@ -129,8 +129,8 @@
                         <div class="text-start">
                             <strong><label class="text-start" id="botonSiFondo">Aún no tienes cuenta?</label></strong>
                         </div>
-                        <button onclick="registrar()"
-                            style="background: #DDB2B2; color: black;margin-top: -1rem;width: 60%;" type="button"
+                        <button class="btnIngresaLogin inputLogin" onclick="registrar()"
+                            style="background: #DDB2B2; color: black;width: 60%;" type="button"
                             id="botonSiFondo">
                             <strong style=" margin-right: 2rem; margin-left: 2rem;">Registrar</strong>
                         </button>
@@ -143,19 +143,18 @@
                 </div>
                 <div id="columnaLogin" class="col-sm-4">
                     <div class="text-center">
-                        <form action="" method="POST">
-                            <input type="text" id="inputLogin" placeholder="Usuario" required>
-                            <input type="text" id="inputLogin" placeholder="Contraseña" required>
+                        <form>
+                            <input type="text" class="inputLogin" placeholder="Usuario" id="username" autocomplete="off" required>
+                            <input type="password" class="inputLogin" placeholder="Contraseña" id="passwordUser" required autocomplete="off">
                             <br>
                             <a href="#">¿He olvidado mi contraseña?</a>
-                            <button class="btnIngresaLogin" id="inputLogin"
-                                type="submit"><strong>Ingresar</strong></button>
+                            <button onclick="iniciaSesion()" style="background: #DDB2B2; color: black;width: 60%; border: none;" class="btnIngresaLogin inputLogin" type="button"><strong>Ingresar</strong></button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="DivRegister" class="divOcultar">
+        <div id="DivRegister" style="padding-bottom: 2rem;" class="divOcultar">
             <div style="margin: 0;" class="row">
                 <div style="padding: 2rem;" class="col-sm-3">
                     <div class="text-center">
@@ -190,17 +189,19 @@
                 </div>
             </div>
             <div class="container-fluid" style="padding-left: 3rem;">
-                <form action="" method="post">
+                <form>
                     <div class="row">
                         <div class="col-sm-5">
                             <label for="">Ingresa tus nombres</label><br>
-                            <input style="margin-top:1rem; width: 50%;" id="inputLogin" type="text"><br>
+                            <input style="margin-top:1rem; width: 50%;" class="inputLogin" type="text" autocomplete="off"><br>
                             <label for="">Apellidos</label><br>
-                            <input style="margin-top:1rem; width: 50%;" id="inputLogin" type="text"><br>
+                            <input style="margin-top:1rem; width: 50%;" class="inputLogin" type="text" autocomplete="off"><br>
                             <label for="">Correo</label><br>
-                            <input style="margin-top:1rem;width: 50%;" id="inputLogin" type="text"><br>
+                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="email" autocomplete="off"><br>
+                            <label for="">Contraseña</label><br>
+                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="password" autocomplete="off"><br>
                             <label for="">¿Cuál es tu fecha de nacimiento?</label><br>
-                            <input style="margin-top:1rem;width: 50%;" id="inputLogin" type="date"><br>
+                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="date" autocomplete="off"><br>
                         </div>
                         <div class="col-sm">
                             <label for="">¿Cuál es tu sexo?</label><br>
@@ -227,7 +228,7 @@
                                     He leído y acepto los <a target="_blank" href="https://www.macroplastics.com/images/docs/Terminos-y-Condiciones-de-Venta.pdf"">términos y condiciones.</a>
                                 </label>
                             </div>
-                            <button style="background: #DDB2B2; color: black;margin-top: 2rem;width: 60%; margin-bottom: 2rem;" type="button"
+                            <button style="background: #DDB2B2; color: black;margin-top: 2rem;width: 40%; margin-bottom: 2rem;" type="button"
                                 id="botonSiFondo">
                                 <strong style=" margin-right: 2rem; margin-left: 2rem;">Registrar</strong>
                             </button>

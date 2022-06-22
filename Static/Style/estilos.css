@@ -178,7 +178,7 @@ padding-right: 2rem;
 
 #DivRegister{
     background: #F5F2F2;
-    height:fit-content;
+    height: 100%;
     padding-top: 2rem;
 }
 
@@ -206,7 +206,7 @@ padding-right: 2rem;
     height:3rem;
 }
 
-#inputLogin{
+.inputLogin{
     border: solid 1px #666;
     width: 60%;
     height: 45px;
@@ -245,6 +245,12 @@ padding-right: 2rem;
     background:rgba(99, 96, 95, .8);
     padding-left: 1rem;
     margin-right: 1rem;
+}
+
+#seeAddNotice{
+    margin-top: 1rem;
+    border: solid 2px #000;
+    border-radius: 10px;
 }
 
 .search-box{
