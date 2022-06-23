@@ -18,6 +18,10 @@
 
 <body>
     <header>
+        <h3 id="FullDay" style="display: none;"></h3>
+        <div id="publicarNoticia" style="display: none;"></div>
+        <div id="seeBtnPost" style="display: none;"></div>
+        <div id="DiUsername" style="display: none;"></div>
         <!--Navbar de titulo, search, cuenta y configuracion-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -52,11 +56,13 @@
                             </a>
                         </div>
                         <div class="nav-item">
-                            <button style="background: transparent; border-style:none" class="dropdown-toogle" aria-expanded="false" data-bs-toggle="dropdown">
+                            <button style="background: transparent; border-style:none" class="dropdown-toogle"
+                                aria-expanded="false" data-bs-toggle="dropdown">
                                 <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/settings_yvgceh.png"
                                     alt="Settings.png" class="d-inline-block align-text-top">
                             </button>
-                            <ul style="position: absolute; transform: translate(0px, 50px);" class="dropdown-menu-end dropdown-menu">
+                            <ul style="position: absolute; transform: translate(0px, 50px);"
+                                class="dropdown-menu-end dropdown-menu">
                                 <li style="cursor: pointer;">
                                     <h6 class="dropdown-header"><i class="fa-solid fa-language"></i>Idioma</h6>
                                 </li>
@@ -73,7 +79,8 @@
         <!--Menu de categorias-->
         <nav id="subnav" class="navbar navbar-expand-lg sticky-top">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavb" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavb"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i style="color: white;" class="fa-solid fa-bars"></i>
                 </button>
                 <div style="position:static;" class="collapse navbar-collapse" id="navbarNavb">
@@ -81,7 +88,8 @@
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Cultura</a></li>
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Clima</a></li>
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Deporte</a></li>
-                        <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Entretenimiento</a></li>
+                        <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Entretenimiento</a>
+                        </li>
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Moda</a></li>
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Mundo</a></li>
                         <li class="nav-item"><a class="navbar-brand nav-link" href="categoria.html">Música</a></li>
@@ -130,8 +138,7 @@
                             <strong><label class="text-start" id="botonSiFondo">Aún no tienes cuenta?</label></strong>
                         </div>
                         <button class="btnIngresaLogin inputLogin" onclick="registrar()"
-                            style="background: #DDB2B2; color: black;width: 60%;" type="button"
-                            id="botonSiFondo">
+                            style="background: #DDB2B2; color: black;width: 60%;" type="button" id="botonSiFondo">
                             <strong style=" margin-right: 2rem; margin-left: 2rem;">Registrar</strong>
                         </button>
                     </div>
@@ -144,13 +151,46 @@
                 <div id="columnaLogin" class="col-sm-4">
                     <div class="text-center">
                         <form>
-                            <input type="text" class="inputLogin" placeholder="Usuario" id="username" autocomplete="off" required>
-                            <input type="password" class="inputLogin" placeholder="Contraseña" id="passwordUser" required autocomplete="off">
+                            <input type="text" class="inputLogin" placeholder="Usuario" id="username" autocomplete="off"
+                                required>
+                            <input type="password" class="inputLogin" placeholder="Contraseña" id="passwordUser"
+                                required autocomplete="off">
                             <br>
-                            <a href="#">¿He olvidado mi contraseña?</a>
-                            <button onclick="iniciaSesion()" style="background: #DDB2B2; color: black;width: 60%; border: none;" class="btnIngresaLogin inputLogin" type="button"><strong>Ingresar</strong></button>
+                            <button
+                                style="background: transparent; border: none;color: #344C9F;text-decoration:underline;"
+                                data-bs-toggle="modal" type="button" data-bs-target="#exampleModal">¿He olvidado mi
+                                contraseña?</button>
+                            <button onclick="iniciaSesion()"
+                                style="background: #DDB2B2; color: black;width: 60%; border: none;"
+                                class="btnIngresaLogin inputLogin" type="button"><strong>Ingresar</strong></button>
                         </form>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 id="exampleModalLabel">He olvidado mi contraseña</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                            <div style="padding: 1rem;" class="mb-3 row">
+                                <label for="inputPassword" class="col-sm-5 col-form-label">Ingresa tu email:</label>
+                                <div class="col-sm">
+                                    <input type="email" class="form-control" id="inputPassword" required
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="d-flex justify-content-between">
+                                <button type="submit" class="btn btn-success">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -181,7 +221,8 @@
                                         src="https://res.cloudinary.com/drdadalne/image/upload/v1651903779/google_j8askp.png"
                                         alt="Google.png"></div>
                                 <div>
-                                    <strong><label style="margin-right: 2rem;">Registrarse con Google</label></strong>
+                                    <strong><label style="margin-right: 2rem;">Registrarse con
+                                            Google</label></strong>
                                 </div>
                             </div>
                         </button>
@@ -193,15 +234,20 @@
                     <div class="row">
                         <div class="col-sm-5">
                             <label for="">Ingresa tus nombres</label><br>
-                            <input style="margin-top:1rem; width: 50%;" class="inputLogin" type="text" autocomplete="off"><br>
+                            <input style="margin-top:1rem; width: 50%;" class="inputLogin" type="text"
+                                autocomplete="off"><br>
                             <label for="">Apellidos</label><br>
-                            <input style="margin-top:1rem; width: 50%;" class="inputLogin" type="text" autocomplete="off"><br>
+                            <input style="margin-top:1rem; width: 50%;" class="inputLogin" type="text"
+                                autocomplete="off"><br>
                             <label for="">Correo</label><br>
-                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="email" autocomplete="off"><br>
+                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="email"
+                                autocomplete="off"><br>
                             <label for="">Contraseña</label><br>
-                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="password" autocomplete="off"><br>
+                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="password"
+                                autocomplete="off"><br>
                             <label for="">¿Cuál es tu fecha de nacimiento?</label><br>
-                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="date" autocomplete="off"><br>
+                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="date"
+                                autocomplete="off"><br>
                         </div>
                         <div class="col-sm">
                             <label for="">¿Cuál es tu sexo?</label><br>
@@ -225,15 +271,16 @@
                                 <input class="form-check-input" type="radio" name="acepta" id="exampleRadios2"
                                     value="Mujer">
                                 <label class="form-check-label" for="exampleRadios2">
-                                    He leído y acepto los <a target="_blank" href="https://www.macroplastics.com/images/docs/Terminos-y-Condiciones-de-Venta.pdf"">términos y condiciones.</a>
+                                    He leído y acepto los <a target="_blank"
+                                        href="https://www.macroplastics.com/images/docs/Terminos-y-Condiciones-de-Venta.pdf"">términos y condiciones.</a>
                                 </label>
                             </div>
-                            <button style="background: #DDB2B2; color: black;margin-top: 2rem;width: 40%; margin-bottom: 2rem;" type="button"
-                                id="botonSiFondo">
-                                <strong style=" margin-right: 2rem; margin-left: 2rem;">Registrar</strong>
-                            </button>
+                            <button style=" background: #DDB2B2; color: black;margin-top: 2rem;width: 40%;
+                                        margin-bottom: 2rem;" type="button" id="botonSiFondo">
+                                        <strong style=" margin-right: 2rem; margin-left: 2rem;">Registrar</strong>
+                                        </button>
+                            </div>
                         </div>
-                    </div>
                 </form>
             </div>
         </div>

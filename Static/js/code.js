@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function registrar() {
   document.getElementById("DivRegister").classList.remove("divOcultar");
   document.getElementById("DivLogIn").classList.add("divOcultar");
-  console.log(window.location);
 }
 
 function iniciaSesion() {
