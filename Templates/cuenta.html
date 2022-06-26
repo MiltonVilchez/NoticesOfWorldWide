@@ -64,10 +64,14 @@
                             <ul style="position: absolute; transform: translate(0px, 50px);"
                                 class="dropdown-menu-end dropdown-menu">
                                 <li style="cursor: pointer;">
-                                    <h6 class="dropdown-header"><i class="fa-solid fa-language"></i>Idioma</h6>
+                                    <h6 class="dropdown-header"><i class="fa-solid fa-language"></i> Idioma</h6>
                                 </li>
                                 <li style="cursor: pointer;">
-                                    <h6 class="dropdown-header"><i class="fa-solid fa-moon-over-sun"></i>Modo: Claro
+                                    <h6 class="dropdown-header"><i class="fa-solid fa-sun"></i> Modo: Claro
+                                    </h6>
+                                </li>
+                                <li style="cursor: pointer;">
+                                    <h6 class="dropdown-header" id="pointLocated">
                                     </h6>
                                 </li>
                             </ul>
@@ -115,25 +119,32 @@
                 </div>
                 <div id="columnaLogin" class="col-sm-4">
                     <div class="text-center">
-                        <button style="background:#344C9F;color:white;" type="button" id="botonSiFondo">
-                            <div style="display:block; justify-self:save; justify-content: space-between;">
-                                <div><img style="font-size: xx-large; margin-right: 1rem; margin-left: 1rem;"
-                                        src="https://res.cloudinary.com/drdadalne/image/upload/v1651903934/facebook_sazaf4.png"
-                                        alt="Facebook.png"></div>
-                                <div><strong><label style="margin-right: 2rem;">Continuar con Facebook</label></strong>
+                        <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%25226ryqou3axnvx1tdo3x1ocvzzr1ypsklz1qtv9asogej791eyxe02%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Des_LA%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Da5f66dbd-9cd2-44f6-ad4e-4151d5702c7f%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%25226ryqou3axnvx1tdo3x1ocvzzr1ypsklz1qtv9asogej791eyxe02%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=es_LA&pl_dbl=0"
+                            target="_blank">
+                            <button style="background:#344C9F;color:white;" type="button" id="botonSiFondo">
+                                <div style="display:block; justify-self:save; justify-content: space-between;">
+                                    <div><img style="font-size: xx-large; margin-right: 1rem; margin-left: 1rem;"
+                                            src="https://res.cloudinary.com/drdadalne/image/upload/v1651903934/facebook_sazaf4.png"
+                                            alt="Facebook.png"></div>
+                                    <div><strong><label style="margin-right: 2rem;">Continuar con
+                                                Facebook</label></strong>
+                                    </div>
                                 </div>
-                            </div>
-                        </button>
-                        <button style="background: white; color: black;" type="button" id="botonSiFondo">
-                            <div style="display:block; justify-self:save; justify-content: space-between;">
-                                <div><img style="font-size: xx-large; margin-right: 1rem; margin-left: 1rem;"
-                                        src="https://res.cloudinary.com/drdadalne/image/upload/v1651903779/google_j8askp.png"
-                                        alt="Google.png"></div>
-                                <div>
-                                    <strong><label style="margin-right: 2rem;">Continuar con Google</label></strong>
+                            </button>
+                        </a>
+                        <a href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?state=76144a27-cc52-4d92-a7cc-bd10ebde80b9&access_type=offline&prompt=consent&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&response_type=code&client_id=779010036194-lf6spugv22vvj41pqjdj4d8k2tq7o5fd.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.canva.com%2Foauth%2Fauthorized%2Fgoogle&flowName=GeneralOAuthFlow"
+                            target="_blank">
+                            <button style="background: white; color: black;" type="button" id="botonSiFondo">
+                                <div style="display:block; justify-self:save; justify-content: space-between;">
+                                    <div><img style="font-size: xx-large; margin-right: 1rem; margin-left: 1rem;"
+                                            src="https://res.cloudinary.com/drdadalne/image/upload/v1651903779/google_j8askp.png"
+                                            alt="Google.png"></div>
+                                    <div>
+                                        <strong><label style="margin-right: 2rem;">Continuar con Google</label></strong>
+                                    </div>
                                 </div>
-                            </div>
-                        </button>
+                            </button>
+                        </a>
                         <div class="text-start">
                             <strong><label class="text-start" id="botonSiFondo">Aún no tienes cuenta?</label></strong>
                         </div>
@@ -151,9 +162,9 @@
                 <div id="columnaLogin" class="col-sm-4">
                     <div class="text-center">
                         <form>
-                            <input type="text" class="inputLogin" placeholder="Usuario" id="username" autocomplete="off"
+                            <input style="padding: 10px;" type="text" class="inputLogin" placeholder="Usuario" id="username" autocomplete="off"
                                 required>
-                            <input type="password" class="inputLogin" placeholder="Contraseña" id="passwordUser"
+                            <input style="padding: 10px;" type="password" class="inputLogin" placeholder="Contraseña" id="passwordUser"
                                 required autocomplete="off">
                             <br>
                             <button
@@ -205,27 +216,33 @@
                 </div>
                 <div class="col-sm">
                     <div style="margin-left: 3rem;">
-                        <button style="background:#344C9F;color:white;" type="button" id="botonSiFondo">
-                            <div style="display:inline-flex; justify-self:save; justify-content: space-between;">
-                                <div><img style="font-size: xx-large; margin-right: 1rem; margin-left: 1rem;"
-                                        src="https://res.cloudinary.com/drdadalne/image/upload/v1651903934/facebook_sazaf4.png"
-                                        alt="Facebook.png"></div>
-                                <div><strong><label style="margin-right: 2rem;">Registrarse con
-                                            Facebook</label></strong>
+                        <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%25226ryqou3axnvx1tdo3x1ocvzzr1ypsklz1qtv9asogej791eyxe02%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Des_LA%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Da5f66dbd-9cd2-44f6-ad4e-4151d5702c7f%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%25226ryqou3axnvx1tdo3x1ocvzzr1ypsklz1qtv9asogej791eyxe02%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=es_LA&pl_dbl=0"
+                            target="_blank">
+                            <button style="background:#344C9F;color:white;" type="button" id="botonSiFondo">
+                                <div style="display:inline-flex; justify-self:save; justify-content: space-between;">
+                                    <div><img style="font-size: xx-large; margin-right: 1rem; margin-left: 1rem;"
+                                            src="https://res.cloudinary.com/drdadalne/image/upload/v1651903934/facebook_sazaf4.png"
+                                            alt="Facebook.png"></div>
+                                    <div><strong><label style="margin-right: 2rem;">Registrarse con
+                                                Facebook</label></strong>
+                                    </div>
                                 </div>
-                            </div>
-                        </button><br>
-                        <button style="background: white; color: black;" type="button" id="botonSiFondo">
-                            <div style="display:inline-flex; justify-self:save; justify-content: space-between;">
-                                <div><img style="font-size: xx-large; margin-right: 1rem; margin-left: 1rem;"
-                                        src="https://res.cloudinary.com/drdadalne/image/upload/v1651903779/google_j8askp.png"
-                                        alt="Google.png"></div>
-                                <div>
-                                    <strong><label style="margin-right: 2rem;">Registrarse con
-                                            Google</label></strong>
+                            </button>
+                        </a><br>
+                        <a href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?state=76144a27-cc52-4d92-a7cc-bd10ebde80b9&access_type=offline&prompt=consent&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&response_type=code&client_id=779010036194-lf6spugv22vvj41pqjdj4d8k2tq7o5fd.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.canva.com%2Foauth%2Fauthorized%2Fgoogle&flowName=GeneralOAuthFlow"
+                            target="_blank">
+                            <button style="background: white; color: black;" type="button" id="botonSiFondo">
+                                <div style="display:inline-flex; justify-self:save; justify-content: space-between;">
+                                    <div><img style="font-size: xx-large; margin-right: 1rem; margin-left: 1rem;"
+                                            src="https://res.cloudinary.com/drdadalne/image/upload/v1651903779/google_j8askp.png"
+                                            alt="Google.png"></div>
+                                    <div>
+                                        <strong><label style="margin-right: 2rem;">Registrarse con
+                                                Google</label></strong>
+                                    </div>
                                 </div>
-                            </div>
-                        </button>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -234,20 +251,20 @@
                     <div class="row">
                         <div class="col-sm-5">
                             <label for="">Ingresa tus nombres</label><br>
-                            <input style="margin-top:1rem; width: 50%;" class="inputLogin" type="text"
-                                autocomplete="off"><br>
+                            <input style="margin-top:1rem; width: 50%; padding: 10px;" class="inputLogin" type="text"
+                                autocomplete="off" required><br>
                             <label for="">Apellidos</label><br>
-                            <input style="margin-top:1rem; width: 50%;" class="inputLogin" type="text"
-                                autocomplete="off"><br>
+                            <input style="margin-top:1rem; width: 50%; padding: 10px;" class="inputLogin" type="text"
+                                autocomplete="off" required><br>
                             <label for="">Correo</label><br>
-                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="email"
-                                autocomplete="off"><br>
+                            <input style="margin-top:1rem;width: 50%; padding: 10px;" class="inputLogin" type="email"
+                                autocomplete="off" required><br>
                             <label for="">Contraseña</label><br>
-                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="password"
-                                autocomplete="off"><br>
+                            <input style="margin-top:1rem;width: 50%; padding: 10px;" class="inputLogin" type="password"
+                                autocomplete="off" required><br>
                             <label for="">¿Cuál es tu fecha de nacimiento?</label><br>
-                            <input style="margin-top:1rem;width: 50%;" class="inputLogin" type="date"
-                                autocomplete="off"><br>
+                            <input style="margin-top:1rem;width: 50%; padding: 10px;" class="inputLogin" type="date"
+                                autocomplete="off" required><br>
                         </div>
                         <div class="col-sm">
                             <label for="">¿Cuál es tu sexo?</label><br>
@@ -275,9 +292,9 @@
                                         href="https://www.macroplastics.com/images/docs/Terminos-y-Condiciones-de-Venta.pdf"">términos y condiciones.</a>
                                 </label>
                     
-                                        <p id="status"></p>
-                                        <a id="map-link" target="_blank"></a>
-                                        <p style="color: rgb(123, 120, 120);" id="infolocated"></p>
+                                <p id="status"></p>
+                                <a id="map-link" target="_blank"></a>
+                                <p style="color: rgb(123, 120, 120);" id="infolocated"></p>
 
                             </div>
                             <button style=" background: #DDB2B2; color: black;margin-top: 2rem;width: 40%;

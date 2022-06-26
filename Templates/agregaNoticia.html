@@ -113,7 +113,8 @@
             <h3 id="DiUsername"></h3>
             <button style="margin-top: 2rem;" class="btn btn-secondary" type="button" id="btnAddNotice"
                 onclick="seeAddNotice()"><i class="fa-solid fa-plus"></i> Agrega una noticia</button>
-            <a style="margin-top: 2rem;" href="index.html"><button style="margin-top: 2rem;" class="btn btn-success"><i class="fa-solid fa-circle-arrow-up-right"></i>Ir a la página principal</button></a>
+            <a style="margin-top: 2rem;" href="index.html"><button style="margin-top: 2rem;" class="btn btn-success"><i
+                        class="fa-solid fa-circle-arrow-up-right"></i>Ir a la página principal</button></a>
             <div id="seeAddNotice" class="divOcultar animate__animated">
                 <div class="row">
                     <div class="col-sm">
@@ -132,9 +133,22 @@
                             </div>
                             <div style="padding: 1rem;" class="mb-3 row">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">Categoría:</label>
-                                <div class="col-sm">
-                                    <input type="text" class="form-control" id="inputPassword" required>
-                                </div>
+                                <select class="form-select col-sm form-select-md"  aria-label=".form-select-md example">
+                                    <option selected>Selecciona una categoría</option>
+                                    <option value="1">Cultura</option>
+                                    <option value="2">Clima</option>
+                                    <option value="3">Deporte</option>
+                                    <option value="4">Entretenimiento</option>
+                                    <option value="5">Moda</option>
+                                    <option value="6">Mundo</option>
+                                    <option value="7">Música</option>
+                                    <option value="8">Política</option>
+                                    <option value="9">Salud</option>
+                                    <option value="10">Tecnología</option>
+                                    <option value="11">Viajes</option>
+                                    <option value="12">Videos</option>
+                                    <option value="13">Otro</option>
+                                </select>
                             </div>
                             <div style="padding: 1rem;" class="mb-3 row">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">Foto:</label>
@@ -145,11 +159,11 @@
                             <div style="padding: 1rem;" class="mb-3 row">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">Acontecimientos:</label>
                                 <div class="col-sm">
-                                    <textarea style="resize:both;width: 100%;"></textarea>
+                                    <textarea style="resize:both;width: 100%;" required></textarea>
                                 </div>
                             </div>
                             <div style="padding-bottom: 1rem;" class="text-center">
-                                <button class="btn btn-warning" type="button">Agregar</button>
+                                <button class="btn btn-warning" type="submit">Agregar</button>
                             </div>
                         </form>
                     </div>

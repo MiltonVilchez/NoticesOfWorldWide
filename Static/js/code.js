@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem('TipoUsuario') == 'Periodista'){
     document.getElementById("publicarNoticia").classList.remove('divOcultar');
     document.getElementById('seeBtnPost').classList.remove('divOcultar');
+    document.getElementById('addAcontecimiento').classList.remove('divOcultar');
     document.getElementById("DiUsername").innerHTML = "Hola periodista, " + localStorage.getItem('username');
   }
 });
