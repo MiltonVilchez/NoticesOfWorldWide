@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         status.textContent = '';
         mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
         mapLink.textContent = 'Tú ubicación actual';
-        info.innerHTML = 'Tú ubicación la ocuparemos para mostrar noticias de tú país';
+        info.innerHTML = `<i class="fa-solid fa-info"><p>Tú ubicación la ocuparemos para mostrar noticias de tú país</p></i>`;
     }
 
     function error() {
