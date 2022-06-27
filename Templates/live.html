@@ -19,41 +19,55 @@
 <body>
     <header>
         <!--Navbar de titulo, search, cuenta y configuracion-->
-        <nav class="navbar navbar-light bg-light">
-            <div id="navlayoutPadre" class="container-fluid">
-                <div class="nav-item">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-flex justify-content-between">
                     <a class="navbar-brand" href="#">
                         <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650255318/newspaper_vlgyka.png"
-                            alt="iconoNOWW.png" width="30" height="24" class="d-inline-block align-text-top">
+                            alt="iconoNOWW.png" width="40" height="32" class="d-inline-block align-text-top">
                         NOWW
                     </a>
                 </div>
-                <div class="nav-item" id="navlayout">
-                    <div class="search-box">
-                        <input type="text" placeholder="Búsqueda" class="search-input" />
-                        <a href="#" class="search-btn"><span style="color: black; font-size:large"
-                                class="fas fa-search"></span></a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="cuenta.html">
-                            <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/account_ken7li.png"
-                                alt="Usuario.png" class="d-inline-block align-text-top">
-                        </a>
-                    </div>
-                    <div class="nav-item">
-                        <button style="background: transparent; border-style:none" class="dropdown-toogle" aria-expanded="false" data-bs-toggle="dropdown">
-                            <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/settings_yvgceh.png"
-                                alt="Settings.png" class="d-inline-block align-text-top">
-                        </button>
-                        <ul style="position: absolute; transform: translate(0px, 50px);" class="dropdown-menu-end dropdown-menu">
-                            <li style="cursor: pointer;">
-                                <h6 class="dropdown-header"><i class="fa-solid fa-language"></i>Idioma</h6>
-                            </li>
-                            <li style="cursor: pointer;">
-                                <h6 class="dropdown-header"><i class="fa-solid fa-moon-over-sun"></i>Modo: Claro
-                                </h6>
-                            </li>
-                        </ul>
+                <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
+                    <div class="navbar-nav" id="navlayout">
+                        <div class="nav-item">
+                            <a href="live.html" class="navbar-brand">
+                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/live_jazncv.png"
+                                    alt="live.png" class="d-inline-block align-text-top">
+                            </a>
+                        </div>
+                        <div class="search-box nav-item">
+                            <input type="text" placeholder="Búsqueda" class="search-input" />
+                            <a href="#" class="search-btn"><span style="color: black; font-size:large"
+                                    class="fas fa-search"></span></a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="cuenta.html">
+                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/account_ken7li.png"
+                                    alt="Usuario.png" class="d-inline-block align-text-top">
+                            </a>
+                        </div>
+                        <div class="nav-item">
+                            <button style="background: transparent; border-style:none" class="dropdown-toogle"
+                                aria-expanded="false" data-bs-toggle="dropdown">
+                                <img src="https://res.cloudinary.com/drdadalne/image/upload/v1650256106/settings_yvgceh.png"
+                                    alt="Settings.png" class="d-inline-block align-text-top">
+                            </button>
+                            <ul style="position: absolute; transform: translate(0px, 50px);"
+                                class="dropdown-menu-end dropdown-menu">
+                                <li style="cursor: pointer;">
+                                    <h6 class="dropdown-header"><i class="fa-solid fa-language"></i>Idioma</h6>
+                                </li>
+                                <li style="cursor: pointer;">
+                                    <h6 class="dropdown-header"><i class="fa-solid fa-moon-over-sun"></i>Modo: Claro
+                                    </h6>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,7 +116,8 @@
                     </div>
                     <h3>Así es como Biden 'fomenta' el crimen violento: Christie</h3>
                     <p>El exgobernador de Nueva Jersey, Chris Christie, dice que la administración de Biden no ha
-                        mostrado interés en frenar los delitos violentos en 'Sunday Night in America'. #FoxNews #Gowdy</p>
+                        mostrado interés en frenar los delitos violentos en 'Sunday Night in America'. #FoxNews #Gowdy
+                    </p>
                 </section>
             </div>
             <div style="padding:0;" class="col-sm">
@@ -135,5 +150,8 @@
         </div>
     </main>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="../Static/js/code.js"></script>
 </html>
