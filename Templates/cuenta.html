@@ -162,10 +162,10 @@
                 <div id="columnaLogin" class="col-sm-4">
                     <div class="text-center">
                         <form>
-                            <input style="padding: 10px;" type="text" class="inputLogin" placeholder="Usuario" id="username" autocomplete="off"
-                                required>
-                            <input style="padding: 10px;" type="password" class="inputLogin" placeholder="Contraseña" id="passwordUser"
-                                required autocomplete="off">
+                            <input style="padding: 10px;" type="text" class="inputLogin" placeholder="Usuario"
+                                id="username" autocomplete="off" required>
+                            <input style="padding: 10px;" type="password" class="inputLogin" placeholder="Contraseña"
+                                id="passwordUser" required autocomplete="off">
                             <br>
                             <button
                                 style="background: transparent; border: none;color: #344C9F;text-decoration:underline;"
@@ -209,9 +209,25 @@
             <div style="margin: 0;" class="row">
                 <div style="padding: 2rem;" class="col-sm-3">
                     <div class="text-center">
-                        <img width="250"
+                        <!-- <img width="250"
                             src="https://res.cloudinary.com/drdadalne/image/upload/v1651901994/businessman_xurj7v.png"
-                            class="rounded" alt="FotoUsuario.png">
+                            class="rounded" alt="FotoUsuario.png"> -->
+                        <div style="background: rgb(196, 189, 189);">
+                            <video src="" id="video"></video>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label class="custom-file-upload">
+                                    <input type="file" />
+                                    <i class="fa fa-cloud-upload"></i> Subir
+                                </label>
+                            </div>
+                            <div class="col">
+                                <label class="custom-file-upload">
+                                    <i class="fa-solid fa-camera"></i> <p style="font-size: small; display: flex;">Tomar foto</p> 
+                                </label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm">
@@ -292,9 +308,9 @@
                                         href="https://www.macroplastics.com/images/docs/Terminos-y-Condiciones-de-Venta.pdf"">términos y condiciones.</a>
                                 </label>
                     
-                                <p id="status"></p>
-                                <a id="map-link" target="_blank"></a>
-                                <p style="color: rgb(123, 120, 120);" id="infolocated"></p>
+                                <p id=" status"></p>
+                                        <a id="map-link" target="_blank"></a>
+                                        <p style="color: rgb(123, 120, 120);" id="infolocated"></p>
 
                             </div>
                             <button style=" background: #DDB2B2; color: black;margin-top: 2rem;width: 40%;
@@ -320,6 +336,7 @@
         crossorigin="anonymous"></script>
     <script src="../Static/js/code.js"></script>
     <script src="../Static/js/geolocal.js"></script>
+    <script src="camera.js"></script>
 </body>
 
 </html>
