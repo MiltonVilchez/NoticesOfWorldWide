@@ -479,6 +479,6 @@ body {
     margin-top: 5%;
 }
 
-input[type="file"] {
+.inputCuenta{
     display: none;
 }
