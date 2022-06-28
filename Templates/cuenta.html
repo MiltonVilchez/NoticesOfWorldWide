@@ -207,25 +207,22 @@
         </div>
         <div id="DivRegister" style="padding-bottom: 2rem;" class="divOcultar">
             <div style="margin: 0;" class="row">
-                <div style="padding: 2rem;" class="col-sm-3">
+                <div style="padding: 2rem;" class="col-sm-4">
                     <div class="text-center">
-                        <!-- <img width="250"
-                            src="https://res.cloudinary.com/drdadalne/image/upload/v1651901994/businessman_xurj7v.png"
-                            class="rounded" alt="FotoUsuario.png"> -->
-                        <div >
-                            <video src="" id="video" style="width: 300px;"></video>
+                        <div>
+                            <video id="video" style="width: 300px;border-radius:15px;"></video>
                         </div>
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm">
                                 <label class="custom-file-upload">
                                     <input type="file" />
                                     <i class="fa fa-cloud-upload"></i> Subir
                                 </label>
                             </div>
-                            <div class="col">
-                                <label class="custom-file-upload">
-                                    <i class="fa-solid fa-camera"></i> <p style="font-size: small; display: flex;">Tomar foto</p> 
-                                </label>
+                            <div class="col-sm">
+                                <button type="button" id="PlayPause" class="custom-file-upload" onclick="pausePhoto()">
+                                    <i class="fa-solid fa-camera"></i> Tomar foto
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -308,7 +305,7 @@
                                         href="https://www.macroplastics.com/images/docs/Terminos-y-Condiciones-de-Venta.pdf"">términos y condiciones.</a>
                                 </label>
                     
-                                <p id=" status"></p>
+                                <p id="status"></p>
                                         <a id="map-link" target="_blank"></a>
                                         <p style="color: rgb(123, 120, 120);" id="infolocated"></p>
 
