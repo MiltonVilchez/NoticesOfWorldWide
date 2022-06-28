@@ -102,17 +102,23 @@
 
     <main>
         <div class="row">
-            <div style="padding: 0;" class="col-sm">
+            <div style="padding: 0;" class="col-sm-9">
                 <section id="sectionLive" class="container">
                     <div style="margin-top: 1rem;">
                         <a href="index.html"><button class="btn btn-danger"><i
                                     class="fa-solid fa-arrow-left"></i>Regresar</button></a>
                     </div>
-                    <div>
-                        <iframe class="VideoLive" src="https://www.youtube.com/embed/ceqgwo7U28Y"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                    <div class="mt-2">
+                        <video src="/Templates/img/video.mp4" type="video/mp4" style="width:100%;height:500px;" id="miVideo">
+                            Su navegador no soporta el formato de video
+                        </video>
+
+                        <div style="padding-left: 1rem;">
+                            <button onclick="play('miVideo')">&#9658;/||</button>
+                            <button onclick="stopped('miVideo')">&#9726;</button>
+                            <button onclick="skipped(-10, 'miVideo')">&lt;&lt;</button>
+                            <button onclick="skipped(10, 'miVideo')">&gt;&gt;</button>
+                        </div>
                     </div>
                     <h3>Así es como Biden 'fomenta' el crimen violento: Christie</h3>
                     <p>El exgobernador de Nueva Jersey, Chris Christie, dice que la administración de Biden no ha
@@ -123,27 +129,66 @@
             <div style="padding:0;" class="col-sm">
                 <h3 style="margin-top: 1rem;">Otros videos:</h3>
                 <center>
-                    <div style="height: 660px; overflow-y: scroll; overflow-x: hidden;width: fit-content;">
-                        <iframe width="300" height="200" src="https://www.youtube.com/embed/4w3HqzhPR-U"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                    <div style="height: 600px; overflow-y: scroll; overflow-x: hidden;">
+                        <video src="/Templates/img/Lachona.mp4" type="video/mp4" style="width:80%;" id="Video1">
+                            Su navegador no soporta el formato de video
+                        </video>
+                        <div style="padding-bottom: 1rem;">
+                            <button onclick="play('Video1')">&#9658;/||</button>
+                            <button onclick="stopped('Video1')">&#9726;</button>
+                            <button onclick="skipped(-10, 'Video1')">&lt;&lt;</button>
+                            <button onclick="skipped(10, 'Video1')">&gt;&gt;</button>
+                        </div>
 
-                        <iframe width="300" height="200" src="https://www.youtube.com/embed/4w3HqzhPR-U"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <video src="/Templates/img/Noticia1.mp4" type="video/mp4" style="width:80%;" id="Video2">
+                            Su navegador no soporta el formato de video
+                        </video>
+                        <div style="padding-bottom: 1rem;">
+                            <button onclick="play('Video2')">&#9658;/||</button>
+                            <button onclick="stopped('Video2')">&#9726;</button>
+                            <button onclick="skipped(-10, 'Video2')">&lt;&lt;</button>
+                            <button onclick="skipped(10, 'Video2')">&gt;&gt;</button>
+                        </div>
 
-                        <iframe width="300" height="200" src="https://www.youtube.com/embed/4w3HqzhPR-U"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <video src="/Templates/img/Noticia3.mp4" type="video/mp4" style="width:80%;" id="Video3">
+                            Su navegador no soporta el formato de video
+                        </video>
+                        <div style="padding-bottom: 1rem;">
+                            <button onclick="play('Video3')">&#9658;/||</button>
+                            <button onclick="stopped('Video3')">&#9726;</button>
+                            <button onclick="skipped(-10, 'Video3')">&lt;&lt;</button>
+                            <button onclick="skipped(10, 'Video3')">&gt;&gt;</button>
+                        </div>
 
-                        <iframe width="300" height="200" src="https://www.youtube.com/embed/4w3HqzhPR-U"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <video src="/Templates/img/video3.mp4" type="video/mp4" style="width:80%;" id="Video4">
+                            Su navegador no soporta el formato de video
+                        </video>
+                        <div style="padding-bottom: 1rem;">
+                            <button onclick="play('Video4')">&#9658;/||</button>
+                            <button onclick="stopped('Video4')">&#9726;</button>
+                            <button onclick="skipped(-10, 'Video4')">&lt;&lt;</button>
+                            <button onclick="skipped(10, 'Video4')">&gt;&gt;</button>
+                        </div>
 
+                        <video src="/Templates/img/Lachona.mp4" type="video/mp4" style="width:80%;" id="Video5">
+                            Su navegador no soporta el formato de video
+                        </video>
+                        <div style="padding-bottom: 1rem;">
+                            <button onclick="play('Video5')">&#9658;/||</button>
+                            <button onclick="stopped('Video5')">&#9726;</button>
+                            <button onclick="skipped(-10, 'Video5')">&lt;&lt;</button>
+                            <button onclick="skipped(10, 'Video5')">&gt;&gt;</button>
+                        </div>
+
+                        <video src="/Templates/img/Lachona.mp4" type="video/mp4" style="width:80%;" id="Video6">
+                            Su navegador no soporta el formato de video
+                        </video>
+                        <div style="padding-bottom: 1rem;">
+                            <button onclick="play('Video6')">&#9658;/||</button>
+                            <button onclick="stopped('Video6')">&#9726;</button>
+                            <button onclick="skipped(-10, 'Video6')">&lt;&lt;</button>
+                            <button onclick="skipped(10, 'Video6')">&gt;&gt;</button>
+                        </div>
                     </div>
                 </center>
             </div>
@@ -154,4 +199,5 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 <script src="../Static/js/code.js"></script>
+<script src="../Static/js/reproductor.js"></script>
 </html>
